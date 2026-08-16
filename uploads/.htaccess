@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+Options -Indexes
+
+<FilesMatch "\.(jpg|jpeg|png|gif|pdf)$">
+    Order Allow,Deny
+    Allow from all
+    Satisfy Any
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
